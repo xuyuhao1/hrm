@@ -55,12 +55,15 @@ public class CompanyService {
     /***
      * 根据id查询属性
      * @param id
+     * @return
      */
-    public void findById(String id){
-        companyDao.findById(id).get();
+    public Company findById(String id){
+        return companyDao.findById(id).get();
+
     }
     /***
      * 查询企业列表
+     *
      */
     public List<Company> findAll(){
         return companyDao.findAll();
